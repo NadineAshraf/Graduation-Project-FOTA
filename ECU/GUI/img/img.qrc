@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>img/airbag.png</file>
+    <file>img/analysis.png</file>
+    <file>img/brakes.png</file>
+    <file>img/camera.png</file>
+    <file>img/close.png</file>
+    <file>img/cloud.png</file>
+    <file>img/connect.png</file>
+    <file>img/diag.png</file>
+    <file>img/edit.png</file>
+    <file>img/idea.png</file>
+    <file>img/done.png</file>
+    <file>img/ignition-cap.png</file>
+    <file>img/login.png</file>
+    <file>img/not1.png</file>
+    <file>img/schedule.png</file>
+    <file>img/updates.png</file>
+    <file>img/idea.png</file>
+    <file>img/service.png</file>
+    <file>img/water-pump.png</file>
+    <file>img/Siemens_AISIN_Capital_.jpg</file>
+  </qresource>
+</RCC>
