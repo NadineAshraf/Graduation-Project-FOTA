@@ -1,0 +1,81 @@
+{% extends 'layout/app.html' %}
+
+{% load static %}
+
+{% block body %}
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">CRUD</a>
+                </li>
+                <li class="breadcrumb-item active">Add</li>
+            </ol>
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    Crud Add
+                </div>
+                <div class="card-body">
+                    <form class="form-horizontal" action="update/{{ members.id }}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-label-group">
+                                    <input type="text" class="form-control" value="{{ members.firstname }}" name="firstname" placeholder="First Name" id="inputFirst" required>
+                                    <label for="inputFirst">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-label-group">
+                                    <input type="text" class="form-control" value="{{ members.firstname }}" name="lastname" placeholder="Last Name" id="inputLast" required>
+                                    <label for="inputLast">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-label-group">
+                                    <input type="text" class="form-control" value="{{ members.description }}" name="description" placeholder="Description" id="inputdescription" required>
+                                    <label for="inputdescription">Description</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-label-group">
+                                    <input class="form-control" type="tel" value="{{ members.mobile_number }}" name="mobile_number" placeholder="Mobile Number" id="inputMobile">
+                                    <label for="inputMobile">Mobile Number</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-label-group">
+                                    <input class="form-control" type="date" name="date" value="{{ members.date }}" id="dateInput">
+                                    <label for="dateInput">Enter Emp ID</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-label-group">
+                                    <input type="text" id="inputLoca" class="form-control" value="{{ members.date }}"  placeholder="Enter Location" required="">
+                                    <label for="inputLoca">Enter Location</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit">Submit &nbsp;&nbsp;&nbsp;<span></span></button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+
+{% endblock %}

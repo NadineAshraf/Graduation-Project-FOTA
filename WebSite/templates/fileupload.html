@@ -1,0 +1,92 @@
+{% extends 'layout/app.html' %}
+{% block stylesheet %}
+<style>
+</style>
+{% endblock %}
+{% block body %}
+    <div id="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">File Upload</li>
+            </ol>
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    File Upload
+                </div>
+                <div class="card-body">
+                    <form action="fileupload" class="form-horizontal" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-lg">
+                                        <div class="custom-file">
+                                            <input type="file" class="form-control custom-file-input file" name="myfile" id="fileInput">
+                                            <label class="custom-file-label" id="fileLabel" for="fileInput">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-lg">
+                                        <div class="custom-file">
+                                            <input type="text" class="form-control" name="description" placeholder="Description" id="inputFirst" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block" type="submit">Submit &nbsp;&nbsp;&nbsp;<span></span></button>
+                    </form>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    File List
+                </div>
+                <div class="table">
+                    <table class="table table-bordered"  width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>File Name</th>
+                            <th>Created At</th>
+                            {% comment %} <th>Action</th> {% endcomment %}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for document in documents %}
+                            <tr>
+                                <td>{{ document.description }}</td>
+                                <td>{{ document.document }}</td>
+                                <td>{{ document.uploaded_at }}</td>
+                                {% comment %} <td>
+                                    <a class="btn btn-sm btn-danger" href="file/delete/{{ document.id }}"><span class="fa fa-trash"></span>&nbsp;Delete</a>
+                                </td> {% endcomment %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+    <script>
+        $(document).on('change', '.file', function (event) {
+            document.getElementById('fileLabel').innerHTML = event.target.files[0].name;
+        });
+    </script>
+{% endblock %}
