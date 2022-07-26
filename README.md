@@ -62,48 +62,48 @@ This system consists of 2 main controllers as shown in figure:
 ![image](https://user-images.githubusercontent.com/91349300/181058487-df2b4363-af54-49c5-8591-71a89bbd882c.png)
 
 ### Django Project Structure and File Structure 
-1) init.py: This is an empty file.
+**1) init.py:** This is an empty file.
 
-2) settings.py :It contains the Django project configuration.
+**2) settings.py:** It contains the Django project configuration.
 
-3) urls.py :This file tells Django that if a user comes with this URL, direct them to that website.
+**3) urls.py:** This file tells Django that if a user comes with this URL, direct them to that website.
 
 ![image](https://user-images.githubusercontent.com/91349300/181059590-262de7ea-8b59-415c-bae9-53be18ffe0a2.png)
 
 ### Application files 
 
-1) init.py: This is an empty file.
+**1) init.py:** This is an empty file.
 
-2) admin.py : is used for registering the Django models into the Django administration. 
+**2) admin.py:** is used for registering the Django models into the Django administration. 
 
-3) apps.py : is a file that is used to help the user include the application configuration for their app.
+**3) apps.py:** is a file that is used to help the user include the application configuration for their app.
 
-4) models.py : represents the models of web applications in the form of classes.
+**4) models.py:** represents the models of web applications in the form of classes.
 
-5) views.py: It contains all the views in the form of classes.
+**5) views.py:** It contains all the views in the form of classes.
 
-6) urls.py: works the same as that of the urls.py in the project file structure.
+**6) urls.py:** works the same as that of the urls.py in the project file structure.
 
 ### User hierarchy and features
 
-● Login Page:Login form to login to the web site.
+● **Login Page:** Login form to login to the web site.
 
 ![image](https://user-images.githubusercontent.com/91349300/181062011-35f60928-1223-424d-9d23-304ec6bb8515.png)
 
-● Registration 
+● **Registration**
 
 ![image](https://user-images.githubusercontent.com/91349300/181062296-b60e78d2-5bbb-4117-ae8b-85d397be91a5.png)
 
-● Team Members :Views all users or team members working on firmwares. 
+● **Team Members:** Views all users or team members working on firmwares. 
 
 ![image](https://user-images.githubusercontent.com/91349300/181062587-1e7f27b3-2d41-4562-9743-16f0d47a7a64.png)
 
-●  Diagnostics data:This page shows the diagnostics data sent by vehicles to be reviewed 
+●  **Diagnostics data:** This page shows the diagnostics data sent by vehicles to be reviewed 
    and collected for bug fixes.
    
 ![image](https://user-images.githubusercontent.com/91349300/181062793-55b46e04-d0c8-4909-94fe-ea52aeda225f.png)
 
-●  Upload Screen:It has all the info needed for firmware upload and description for it. 
+●  **Upload Screen:** It has all the info needed for firmware upload and description for it. 
 
 ![image](https://user-images.githubusercontent.com/91349300/181062945-50d1dc79-1366-483e-8bd1-a574ad109d8a.png)
 
