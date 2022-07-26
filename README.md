@@ -12,9 +12,9 @@
 ### Hardware Components
 This system consists of 2 main controllers as shown in figure:
 
-•	Raspberry pi: acts as the gateway to the server and acts as an interface to the user by connected to HDMI touch screen. 
+• **Raspberry pi:** acts as the gateway to the server and acts as an interface to the user by connected to HDMI touch screen. 
 
-•	Application ECU: It acts as a faulty node whose software needs to update or have a feature added to it.
+• **Application ECU:** It acts as a faulty node whose software needs to update or have a feature added to it.
 
 ### Software Updates
 
@@ -34,11 +34,11 @@ This system consists of 2 main controllers as shown in figure:
 
 9-	The server sends the hex file to the raspberry by.
 
-10-	The raspberry pi validates the file for errors.
+10- The raspberry pi validates the file for errors.
 
-11-	The raspberry pi sends the hex file through CAN Network to the application ECU, it also sends the update progress to the GUI to display it.
+11- The raspberry pi sends the hex file through CAN Network to the application ECU, it also sends the update progress to the GUI to display it.
 
-12-	The bootloader receives the file and checks for any error, flashes it in the flash memory then jumps to the new application.
+12- The bootloader receives the file and checks for any error, flashes it in the flash memory then jumps to the new application.
 
 # NOIP
 ► Raspberry Pi acts as a server which we want to connect it with a domain name. The Domain name needs static ip which isn’t available we have dynamic ip.
@@ -90,7 +90,7 @@ This system consists of 2 main controllers as shown in figure:
 
 ![image](https://user-images.githubusercontent.com/91349300/181062011-35f60928-1223-424d-9d23-304ec6bb8515.png)
 
-● **Registration**
+● **Registration:**
 
 ![image](https://user-images.githubusercontent.com/91349300/181062296-b60e78d2-5bbb-4117-ae8b-85d397be91a5.png)
 
