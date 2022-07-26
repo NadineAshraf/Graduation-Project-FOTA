@@ -113,7 +113,7 @@ This system consists of 2 main controllers as shown in figure:
 
 ### GUI Toolkit:
 
-  ** PyQt: ** 
+  **PyQt:** 
    - Coding Versatility: is built around the idea of signals and slots for creating contact between objects.
    
    - More than a framework: uses a broad variety of native platform APIs for networking, database development, and more.
