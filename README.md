@@ -157,7 +157,52 @@ To control the flow and interaction between the main parts and the process of th
 
 ![image](https://user-images.githubusercontent.com/91349300/181069233-c75f37b9-96f5-4261-9989-ce0ac7f8c10e.png)
 
-# APP ECU (Application) 
+# APP ECU 
+### Flash Memory Arrangement
+- Total size: 128 KB
+- Bootloader: 10 KB
+- First Bank: 59 KB
+- Second Bank: 59 KB
+
+![image](https://user-images.githubusercontent.com/91349300/181075149-f1344587-94b8-4888-80db-47aa018010a9.png)
+
+### Bootloader 
+
+**Case 1: Only Bootloader present in Flash Memory**
+
+► Program stays in bootloader section waiting for hex file to be received.
+
+► Program is received and stored in Bank 1.
+
+► Bootloader updates option bytes and jumps to new application.
+
+**Case 2: Application running on Bank 1 and software update is received**
+
+► Soft reset is performed and PC returns to Bootloader
+
+► Bank 2 is erased.
+
+► New Application is programmed in Bank 2.
+
+► Bootloader updates option bytes and jumps to new application.
+
+**Case 3: Interruption during flashing **
+
+► Application is running on Bank 2 and software update is received.
+
+► Soft reset is performed and PC returns to Bootloader.
+
+► Bank 1 is erased.
+
+► Program is being flashed in Bank 1.
+
+► Process is interrupted by power off.
+
+► On next power on, application in bank 2 starts running.
+
+![image](https://user-images.githubusercontent.com/91349300/181075532-5055d9c6-d08a-4839-aad4-7be3f4fd4b18.png)
+
+### Application 
 
 ![image](https://user-images.githubusercontent.com/91349300/181069488-32fd3573-53c1-4f55-affa-e4087356db2c.png)
 
