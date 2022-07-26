@@ -186,7 +186,7 @@ To control the flow and interaction between the main parts and the process of th
 
 ► Bootloader updates option bytes and jumps to new application.
 
-**Case 3: Interruption during flashing **
+**Case 3: Interruption during flashing**
 
 ► Application is running on Bank 2 and software update is received.
 
