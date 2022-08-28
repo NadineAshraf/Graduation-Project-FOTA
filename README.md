@@ -32,7 +32,7 @@ This system consists of 2 main controllers as shown in figure:
 
 8-	In case of user acceptance, the raspberry pi requests the new hex file from the server and sends an update request message through CAN to the application ECU to perform a soft reset and start executing the bootloader.
 
-9-	The server sends the hex file to the raspberry by.
+9-	The server sends the hex file to the raspberry Pi.
 
 10- The raspberry pi validates the file for errors.
 
